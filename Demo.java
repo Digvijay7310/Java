@@ -1,21 +1,35 @@
 import java.util.*;
 
 public class Demo {
+
     public static void main(String[] args) {
-        int n = 10;
+        Scanner sc = new Scanner(System.in);
+        int rows =  sc.nextInt();       
+        int cols =  sc.nextInt();     
 
-       for(int i=0; i<n; i++){
-        for(int j=0; j<n-i-1; j++){
-            System.out.print(" ");
-        }
-        int value = 1;
-        for(int j=0; j<=i; j++){
-            System.out.print(value + " ");
+        int [][] numbers = new int[rows][cols];
 
-            value = value * (i -j) / (j+1);
+        // input
+        // rows
+        for(int i=0; i<rows; i++){
+            // cols
+            for(int j=0; j<cols; j++){
+                numbers[i][j] = sc.nextInt();
+            }
+        }  
+        
+
+        // Output
+        for(int j=0; j<cols; j++){
+            for(int i=0; i<rows; i++){
+                System.out.print(numbers[i][j] + " ");
+            }
+                System.out.println(" ");
         }
-        System.out.println();
-       }
+
+        
+
+
 
     } 
 }
